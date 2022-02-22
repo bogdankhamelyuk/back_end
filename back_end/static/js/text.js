@@ -4,9 +4,9 @@ function dtext(){
     var befehle = [
         "wie ist das Wetter?",
 
-        "Schalt die Mikrophone ein.",
+        "Schalt das Mikrophon ein.",
         
-        "Schalt die Mikrophone aus.",
+        "Schalt das Mikrophon aus.",
         
         "wie viel Prozent hat der Akku noch?",
         
