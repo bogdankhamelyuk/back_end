@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+         <!-- download jquery-->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <!--------------------->
+        <link rel="stylesheet" type="text/css" href = "{% static 'style.css' %}">
+    </head>
+    <body>
+        <div id = 'text' class = "hello">
+            Servus👋
+        </div>
+        <div id = 'text' class="name">
+            Mein Name ist Bogdan Khamelyuk. 
+        </div>
+        <div id = 'text' class="what-i-am-doing"> 
+            Ich bin Student im Studiengang „Elektrotechnik-Dual“ der FH Vorarlberg. 
+            Zusammen mit den Betreuern arbeite ich an meiner Bachelorarbeit. 
+            Das Ziel der Arbeit ist die maschinelle Erkennung der Dialektrede möglich zu machen. 
+            Das kann man erreichen, wenn man genügend Audiodaten sammelt. 
+        </div>
+        <div id = 'text' class="what-i-am-doing"> 
+            Deshalb benötige ich deine Hilfe. Du kannst auch deinen Beitrag leisten, indem du 
+            den gegebenen Textbeispiel der vorarlbergeren Mundart sorgfältig durchliest. Die Aufnahme kannst du
+            auch selbst hören und wenn du zufrieden bist auf unserem Server hochladen.
+        </div>
+        <div id = 'text' class="what-i-am-doing"> 
+            Bevor wir loslegen, hätte ich gerne, dass du auf drei Fragen beantwortest. Das ist uns wichtig,
+            um das Modell besser trainieren zu können.
+        </div>
+   
+        <div id = 'text' class="option">
+            <label>Wie alt bist du?</label>
+            <select id="alter" onChange = "getAlter()">
+                <!--
+                disable auto selection of the first value 
+                so that choosing the first option can trigger function-->
+                <option disabled="disabled" selected="selected"></option>
+                <option value="10-20">10-20</option>
+                <option value="21-30">21-30</option>
+                <option value="31-40">31-40</option>
+                <option value="41-50">41-50</option>
+                <option value="51-60">51-60</option>
+                <option value="61-70">61-70</option>
+                <option value=">70">>70</option>
+            </select>
+        </div>
+        <div id = 'text' class="option">
+            <label>Was ist dein Geschlecht?</label>
+            <select id="geschlecht" onChange = "getGeschlecht()">
+                <!--
+                disable auto selection of the first value 
+                so that choosing the first option can trigger function-->
+                <option disabled="disabled" selected="selected"></option>
+                <option value="m">männlich</option>
+                <option value="w">weiblich</option>
+            </select>
+        </div>
+        <div id = 'text' class="option">
+            <label>Mit welchem Dialekt assoziierst du dich am ehesten? </label>
+            <select id="dialekt" onChange = "getDialekt()">
+                <option disabled="disabled" selected="selected"></option>
+                <option value="Brz">Bregenz</option>
+                <option value="Drb/Hms">Dornbirn/Hohenems</option>
+                <option value="Lst">Lustenau</option>
+                <option value="Gtz">Götzis</option>
+                <option value="Rwl">Rankweil/Feldkirch</option>
+                <option value="Nzg">Nenzing</option>
+                <option value="Blz">Bludenz</option>
+                <option value="vW">vorderer Bregenzerwald</option>
+                <option value="hW">hinterer Bregenzerwald</option>
+                <option value="Mfn">Montafon</option>
+                <option value="nVlbg">nicht aus Vorarlberg</option>
+            </select>
+        </div>
+
+        <div id = "button-row" onclick= "validate()">
+            <button id='nextPageBtn'>zum Text</button>
+            <span id="submitError" style="color:red; font-family: Arial, Helvetica, sans-serif; font-size: 10pt"></span>
+        </div>
+       
+        <script src="{% static 'homepage.js'%}"></script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <!-- download jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--------------------->
+        <!-- downloading css stylesheet from static folder -->
+        <link rel="stylesheet" type="text/css" href = "{% static 'style.css' %}">
+        <!--------------------------------------------------->
+
+    </head>
+
+    <body>
+        <!-- in those div-s will be putted text from text.js-->
+        <div id = 'name'></div>
+       
+        <div id = 'author'></div>
+
+        <div id = 'text'> </div>
+
+        <div id='source'></div>
+        <!------------------------------------------------->
+        <div id = 'button-row'>
+            <button id="recordButton"  class = "button-start"> Start</button>
+            <button id="stopButton" class = "button-stop" disabled> Stop/Save</button>
+        </div>
+        <div id = 'stopwatch'>
+            00:00
+        </div>
+        <div id = recordings></div>
+        
+        <!-- recorder.js - is the script for voice recording-->
+        <script src="{% static 'recorder.js' %}"></script>
+        <!----------------------------------------------------------->
+        <!-- text.js - is for generating random texts-->
+        <script src="{% static 'text.js' %}"></script>
+        <!--------------------------------------------->
+        <!-- stopwatch.js for time counting-->
+        <script src="{% static 'stopwatch.js'%}"></script>
+        <!--------------------------------------------->
+    </body>
+</html>
