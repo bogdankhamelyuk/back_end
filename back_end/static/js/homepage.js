@@ -28,17 +28,9 @@ function getDialekt(){
     complete+=1;
 }
 
-function getOft(){
-    let select = document.getElementById('oft');
-    let option = select.options[select.selectedIndex];
-    userInfo += option.value.toString()
-    //console.log(userInfo);
-    complete+=1;
-}
-
 
 function validate(){
-    if (complete >= 4){
+    if (complete >= 3){
         localStorage.setItem('data', userInfo);
         location.href = "/recorder";
     }else{
