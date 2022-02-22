@@ -38,11 +38,11 @@ function dtext(){
         
         "wann ist der Geburtstag von meiner Frau",
         
-        "mein, dein, sein, ihr.",
+        "mein, dein, sein, euer.",
         
         "zu welcher Schule bin ich gegangen?",
         
-        "wie heißt mein Vatter?",
+        "wie heißt mein Vater?",
         
         "wie heißt meine Mutter?"
         
@@ -56,10 +56,10 @@ function dtext(){
     let similarity = true;
     
     while (similarity === true){
-        rand_num1 = Math.floor(Math.random() * 21);
-        rand_num2 = Math.floor(Math.random() * 21);
-        rand_num3 = Math.floor(Math.random() * 21);
-        rand_num4 = Math.floor(Math.random() * 21);
+        rand_num1 = Math.floor(Math.random() * befehle.length);
+        rand_num2 = Math.floor(Math.random() * befehle.length);
+        rand_num3 = Math.floor(Math.random() * befehle.length);
+        rand_num4 = Math.floor(Math.random() * befehle.length);
         if( rand_num1 === rand_num2 &&
             rand_num1 === rand_num3 &&
             rand_num1 === rand_num4 &&
@@ -74,10 +74,7 @@ function dtext(){
         }
     }
 
-
-    var rand_num = Math.floor(Math.random() * (befehle.length - 0) + 0);
-
-    var TEXT1 = '<p1>' + befehle[rand_num1] + '</p1>';
+    var TEXT1 = '<p1 >' + befehle[rand_num1] + '</p1>';
     var TEXT2 = '<p1>' + befehle[rand_num2] + '</p1>';
     var TEXT3 = '<p1>' + befehle[rand_num3] + '</p1>';
     var TEXT4 = '<p1>' + befehle[rand_num4] + '</p1>';

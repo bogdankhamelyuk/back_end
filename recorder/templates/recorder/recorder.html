@@ -12,43 +12,54 @@
     </head>
 
     <body>
-        <div id="t1" class = "recording-row">
-            <div id = 'text1'></div>
-            <div id = 'button-row'>
-                <button id="recordButton"  class = "button-start"> Start</button>
-                <button id="stopButton" class = "button-stop" disabled> Stop/Save</button>
+        <div id="all" style="width: 20%;  word-wrap: break-word">
+            <div id="t1" class = "recording-row">
+                <div id = 'text1' style="margin-top: 15px;" ></div>
+                <div id = 'button-row'>
+                    <button id="recordButton1"  class = "button-start"> Start</button>
+                    <button id="stopButton1" class = "button-stop" disabled> Stop/Save</button>
+                </div>
+            </div>
+
+            <div id="t2" class = "recording-row">
+                <div id = 'text2'></div>
+                <div id = 'button-row'>
+                    <button id="recordButton2"  class = "button-start"> Start</button>
+                    <button id="stopButton2" class = "button-stop" disabled> Stop/Save</button>
+                </div>
+            </div>
+
+            <div id="t3" class = "recording-row">
+                <div id = 'text3'></div>
+                <div id = 'button-row'>
+                    <button id="recordButton3"  class = "button-start"> Start</button>
+                    <button id="stopButton3" class = "button-stop" disabled> Stop/Save</button>
+                </div>
+            </div>
+
+            <div id="t4" class = "recording-row">
+                <div id = 'text4'></div>
+                <div id = 'button-row'>
+                    <button id="recordButton4"  class = "button-start"> Start</button>
+                    <button id="stopButton4" class = "button-stop" disabled> Stop/Save</button>
+                </div>
             </div>
         </div>
 
-        <div id="t2" class = "recording-row">
-            <div id = 'text2'></div>
-            <div id = 'button-row'>
-                <button id="recordButton"  class = "button-start"> Start</button>
-                <button id="stopButton" class = "button-stop" disabled> Stop/Save</button>
-            </div>
-        </div>
-
-        <div id="t3" class = "recording-row">
-            <div id = 'text3'></div>
-            <div id = 'button-row'>
-                <button id="recordButton"  class = "button-start"> Start</button>
-                <button id="stopButton" class = "button-stop" disabled> Stop/Save</button>
-            </div>
-        </div>
-
-        <div id="t4" class = "recording-row">
-            <div id = 'text4'></div>
-            <div id = 'button-row'>
-                <button id="recordButton"  class = "button-start"> Start</button>
-                <button id="stopButton" class = "button-stop" disabled> Stop/Save</button>
-            </div>
+        <div id = "text" style="margin-top: 20px;">
+            <p1 >
+                Wenn du alle Sätze ausgesprochen hast, dann bedanke ich dich herzlich. Du kannst den Tab schließen.
+            </p1>
         </div>
 
        
-        <div id = recordings></div>
+        
         
         <!-- recorder.js - is the script for voice recording-->
-        <script src="{% static 'recorder.js' %}"></script>
+        <script src="{% static 'recorder1.js' %}"></script>
+        <script src="{% static 'recorder2.js' %}"></script>
+        <script src="{% static 'recorder3.js' %}"></script>
+        <script src="{% static 'recorder4.js' %}"></script>
         <!----------------------------------------------------------->
         <!-- text.js - is for generating random texts-->
         <script src="{% static 'text.js' %}"></script>
