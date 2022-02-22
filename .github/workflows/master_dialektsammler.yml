@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'dialektsammler'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C644389224014D608AAB12E6851C6CBF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_667BA43A69164EBCA68ED25E9EAB4882 }}
