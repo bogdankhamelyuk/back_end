@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/9b9c3192-d301-4d80-9a12-b691b24c7eb4/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/dialektsammler",
+    "appService.deploySubpath": "."
+}
