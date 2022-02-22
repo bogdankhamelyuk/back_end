@@ -12,22 +12,46 @@
     </head>
 
     <body>
-        <!-- in those div-s will be putted text from text.js-->
-        <div id = 'name'></div>
+        <div id="t1" class = "recording-row">
+            <div id = 'text1'></div>
+            <div id = 'button-row'>
+                <button id="recordButton"  class = "button-start"> Start</button>
+                <button id="stopButton" class = "button-stop" disabled> Stop/Save</button>
+            </div>
+        </div>
+
+        <div id="t2" class = "recording-row">
+            <div id = 'text2'></div>
+            <div id = 'button-row'>
+                <button id="recordButton"  class = "button-start"> Start</button>
+                <button id="stopButton" class = "button-stop" disabled> Stop/Save</button>
+            </div>
+        </div>
+
+        <div id="t3" class = "recording-row">
+            <div id = 'text3'></div>
+            <div id = 'button-row'>
+                <button id="recordButton"  class = "button-start"> Start</button>
+                <button id="stopButton" class = "button-stop" disabled> Stop/Save</button>
+            </div>
+        </div>
+
+        <div id="t4" class = "recording-row">
+            <div id = 'text4'></div>
+            <div id = 'button-row'>
+                <button id="recordButton"  class = "button-start"> Start</button>
+                <button id="stopButton" class = "button-stop" disabled> Stop/Save</button>
+            </div>
+        </div>
+
        
-        <div id = 'author'></div>
 
-        <div id = 'text'> </div>
-
-        <div id='source'></div>
         <!------------------------------------------------->
         <div id = 'button-row'>
             <button id="recordButton"  class = "button-start"> Start</button>
             <button id="stopButton" class = "button-stop" disabled> Stop/Save</button>
         </div>
-        <div id = 'stopwatch'>
-            00:00
-        </div>
+ 
         <div id = recordings></div>
         
         <!-- recorder.js - is the script for voice recording-->
@@ -37,7 +61,6 @@
         <script src="{% static 'text.js' %}"></script>
         <!--------------------------------------------->
         <!-- stopwatch.js for time counting-->
-        <script src="{% static 'stopwatch.js'%}"></script>
-        <!--------------------------------------------->
+      
     </body>
 </html>

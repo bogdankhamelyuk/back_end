@@ -2,6 +2,7 @@
 URL = window.URL || window.webkitURL;
 
 var recordButton = document.getElementById("recordButton");
+var buttonRow = document.getElementById("button-row");
 var stopButton = document.getElementById("stopButton");
 var rec;
 var blob;
@@ -13,12 +14,15 @@ function handlerFunction(stream) {
     rec.ondataavailable = e => {
         audioChunks.push(e.data);
         if (rec.state == "inactive"){
-            let blob = new Blob(audioChunks,{type:'audio/mpeg-3'});
+            let blob = new Blob(audioChunks,{type:'audio/wav'});
 
             var au = document.createElement('audio');
             var user_data = localStorage.getItem('data');
-            var text_num = localStorage.getItem('text_num');
-            var filename = user_data + "_" + text_num + ".mp3";
+            var parentDivId = buttonRow.parentNode.id;;
+            
+            var text_num = localStorage.getItem(parentDivId);
+
+            var filename = user_data + "_" + text_num + ".wav";
             var url = URL.createObjectURL(blob);
             var li = document.createElement('li');
             au.controls = true;
