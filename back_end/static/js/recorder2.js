@@ -49,19 +49,29 @@ if (navigator.mediaDevices.getUserMedia) {
             au.src = url;
             li.appendChild(au);
             buttonRow2.appendChild(au);
-            var fd=new FormData();
-            fd.append("audio_data",blob, filename);
-            console.log(fd);
-            fetch('https://wavreceiver-bogdankha.pitunnel.com',  {
-            method: 'POST',
-            body: fd,
-            })
-            .then((resp) => {
-                if(resp.status === 200){
-                    buttonRow2.parentNode.appendChild(document.createTextNode ("OK"));
-                }
-            })
-            .catch((err) => ('Error occurred', err))
+
+            var upload = document.createElement('a'); // creating upload link
+            upload.href="#";
+            upload.innerHTML = "Hochladen";
+    
+            li.appendChild(document.createTextNode (" "))//add a space in between
+            li.appendChild(upload)//add the upload link to li
+            buttonRow2.appendChild(li);
+            upload.onclick = e => {
+                var fd=new FormData();
+                fd.append("audio_data",blob, filename);
+                console.log(fd);
+                fetch('https://wavreceiver-bogdankha.pitunnel.com',  {
+                method: 'POST',
+                body: fd,
+                })
+                .then((resp) => {
+                    if(resp.status === 200){
+                        buttonRow2.parentNode.appendChild(document.createTextNode ("OK"));
+                    }
+                })
+                .catch((err) => ('Error occurred', err))
+            }
             console.log("recorder stopped");
         }
         mediaRecorder2.ondataavailable = function(e) {
