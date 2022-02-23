@@ -55,17 +55,17 @@ function dtext(){
 
     let similarity = true;
     
-    while (similarity === true){
+    while (similarity){
         rand_num1 = Math.floor(Math.random() * befehle.length);
         rand_num2 = Math.floor(Math.random() * befehle.length);
         rand_num3 = Math.floor(Math.random() * befehle.length);
         rand_num4 = Math.floor(Math.random() * befehle.length);
-        if( rand_num1 === rand_num2 &&
-            rand_num1 === rand_num3 &&
-            rand_num1 === rand_num4 &&
-            rand_num2 === rand_num3 &&
-            rand_num2 === rand_num4 &&
-            rand_num3 === rand_num4
+        if( (rand_num1 === rand_num2) ||
+            (rand_num1 === rand_num3) ||
+            (rand_num1 === rand_num4) ||
+            (rand_num2 === rand_num3) ||
+            (rand_num2 === rand_num4) ||
+            (rand_num3 === rand_num4)
         ){
             similarity = true;
         }else{
