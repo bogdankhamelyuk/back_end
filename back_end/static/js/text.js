@@ -16,15 +16,13 @@ function dtext(){
         
         "Mach das Dokument auf.",
         
-        "Ruf dem Josef an.",
+        "Ruf Josef an.",
         
         "wie lange dauert ein Tag?",
         
         "wie viel Minuten in einer Stunde?",
         
         "ein, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn.",
-        
-        "11, 12, 13, 14, 15, 16, 17, 18, 19, 20.",
         
         "wo ist meine Arbeit?",
         
@@ -37,8 +35,6 @@ function dtext(){
         "Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag",
         
         "wann ist der Geburtstag von meiner Frau",
-        
-        "mein, dein, sein, euer.",
         
         "zu welcher Schule bin ich gegangen?",
         
