@@ -8,67 +8,30 @@
         <!-- downloading css stylesheet from static folder -->
         <link rel="stylesheet" type="text/css" href = "{% static 'style.css' %}">
         <!--------------------------------------------------->
-
+        
     </head>
+    <body>
 
-    <body>            
-        <div id="all" style="width: 20%;  word-wrap: break-word">
-            <h2>
-                Bitte sprich die Sätze in deinem Dialekt aus.
-            </h2>
-            <div id="t1" class = "recording-row">
-                <div id = 'text1' style="margin-top: 15px;" ></div>
-                <div id = 'button-row'>
-                    <button id="recordButton1"  class = "button-start"> Start</button>
-                    <button id="stopButton1" class = "button-stop" disabled> Stop/Save</button>
-                </div>
-            </div>
-
-            <div id="t2" class = "recording-row">
-                <div id = 'text2'></div>
-                <div id = 'button-row'>
-                    <button id="recordButton2"  class = "button-start"> Start</button>
-                    <button id="stopButton2" class = "button-stop" disabled> Stop/Save</button>
-                </div>
-            </div>
-
-            <div id="t3" class = "recording-row">
-                <div id = 'text3'></div>
-                <div id = 'button-row'>
-                    <button id="recordButton3"  class = "button-start"> Start</button>
-                    <button id="stopButton3" class = "button-stop" disabled> Stop/Save</button>
-                </div>
-            </div>
-
-            <div id="t4" class = "recording-row">
-                <div id = 'text4'></div>
-                <div id = 'button-row'>
-                    <button id="recordButton4"  class = "button-start"> Start</button>
-                    <button id="stopButton4" class = "button-stop" disabled> Stop/Save</button>
-                </div>
-            </div>
-            <div id = "text" style="margin-top: 20px;">
-                <p1 >
-                    Wenn du alle Sätze ausgesprochen hast, dann bedanke ich dich herzlich. Du kannst den Tab schließen.
-                </p1>
-            </div>
+        <div id = "text">
+            <h2>Sprich den gegebenen Satz in deinem Dialekt aus:</h2>
+            <i id="satz">
+                wie ist das Wetter?
+            </i>
         </div>
-
-       
-
-       
+        <div class="recording-row">
+            <input type="button" value="Start" id="startStopButton"></input>
+            
+            <a id="status">  bereit zu aufnehmen</a>
+        </div>
+        <div class="recording-row">
+            <a id="satzNummer">1</a> <a>/21</a>
+        </div>
         
-        
-        <!-- recorder.js - is the script for voice recording-->
-        <script src="{% static 'recorder1.js' %}"></script>
-        <script src="{% static 'recorder2.js' %}"></script>
-        <script src="{% static 'recorder3.js' %}"></script>
-        <script src="{% static 'recorder4.js' %}"></script>
-        <!----------------------------------------------------------->
-        <!-- text.js - is for generating random texts-->
-        <script src="{% static 'text.js' %}"></script>
-        <!--------------------------------------------->
-        <!-- stopwatch.js for time counting-->
-      
+            
+           
+    
+  
+        <script src="{% static 'recorder.js' %}"></script>
+
     </body>
 </html>
