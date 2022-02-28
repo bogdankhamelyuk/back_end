@@ -36,6 +36,7 @@ if (navigator.mediaDevices.getUserMedia) {
         button.onclick = function(){
             if (button.value === "Start"){
                 button.value = "Stop";
+                document.getElementById('status').textContent = '...aufnahme gestartet.';
                 mediaRecorder.start();
                 console.log(mediaRecorder.state);
                 console.log("recorder started");
@@ -56,7 +57,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
             var filename = user_data + "_" + text_num + "-" + Date.now() + ".wav";
 
-            document.getElementById('status').textContent = '..wird hochgeladen '
+            document.getElementById('status').textContent = '...wird hochgeladen ';
 
             const blob = new Blob(chunks, { 'type' : 'audio/wav; codecs=MS_PCM'});
             chunks = [];
@@ -72,9 +73,10 @@ if (navigator.mediaDevices.getUserMedia) {
             .then((resp) => {
                 if(resp.status === 200){
                     if(document.getElementById('satzNummer').textContent < 21){
+                        document.getElementById('status').textContent = 'hochgeladen';
                         document.getElementById('satzNummer').textContent++;
                         document.getElementById('satz').textContent = befehle[document.getElementById('satzNummer').textContent];
-                        document.getElementById('status').textContent = ' bereit zu aufnehmen'
+                        document.getElementById('status').textContent = ' bereit zu aufnehmen';
                     } else {
                         location.href = "/recorder/success";
                     }

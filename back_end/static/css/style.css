@@ -6,7 +6,9 @@
     word-wrap: break-word;
 }
 
-
+#satz{
+    font-weight: bold;
+}
 .recording-row{
     margin-top: 20px;
     font-size: 12pt;
